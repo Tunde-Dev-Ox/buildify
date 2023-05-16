@@ -1,0 +1,190 @@
+body {
+  font-family: "Nunito Sans", sans-serif;
+  background-color: #fff;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  line-height: 1.1;
+  min-height: 100%;
+}
+
+.hero-section {
+  padding-top: 1.5rem;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(/Images/57c2d86bb166809064181470_hero-bg.jpg);
+  background-position: 0px 0px, 50% 50%;
+  background-size: auto, cover;
+  background-repeat: no-repeat;
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.hero-container {
+  display: flex;
+  height: 770px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+}
+
+.navbar-wrapper {
+  width: 100%;
+  display: flex;
+  background-color: transparent;
+  z-index: 40000000;
+  position: relative;
+  max-width: 1300px;
+  margin: 0 auto;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  /** TEXT GRADIENT */
+  color: #eef2e1;
+  background-image: -webkit-linear-gradient(45deg, #eef2e1 56%, #d6d6d6 96%, #cfe4ff 89%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+.nav-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+@media (max-width: 890px) {
+  .nav-menu {
+    display: none;
+  }
+}
+.nav-menu .nav-link {
+  display: inline-block;
+  padding: clamp(0.75rem, -0.875rem + 2.67vw, 1.125rem);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.5s ease-out;
+}
+.nav-menu .nav-link:hover {
+  color: rgba(177, 177, 177, 0.75);
+}
+
+.display-mobile {
+  display: none;
+}
+@media (max-width: 890px) {
+  .display-mobile {
+    display: block;
+  }
+}
+.display-mobile .hamburger-icon {
+  width: clamp(2.75rem, 2.156rem + 2.64vw, 3.625rem);
+}
+
+.hero-content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.hero-content-wrapper .hero-content-container {
+  text-align: center;
+}
+.hero-content-wrapper .hero-content-container .hero-header {
+  font-size: clamp(2.188rem, 1.708rem + 2.56vw, 3.625rem);
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 23px;
+}
+.hero-content-wrapper .hero-content-container .hero-content {
+  font-size: 18px;
+  line-height: 1.1;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 1px 0 #000;
+  margin: 0 auto;
+  margin-bottom: 28px;
+  max-width: 800px;
+  text-align: center;
+}
+.hero-content-wrapper .hero-content-container .hero-downloads {
+  text-align: center;
+}
+@media (max-width: 360px) {
+  .hero-content-wrapper .hero-content-container .hero-downloads {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.hero-content-wrapper .hero-content-container .hero-downloads .btn-hero {
+  position: relative;
+  display: inline-block;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  padding: 24px;
+  font-size: 16px;
+  border: 1px solid #0052ff;
+  background-color: rgba(0, 81, 255, 0.8235294118);
+  -webkit-appearance: button;
+  overflow: visible;
+  text-transform: uppercase;
+  transition: all 0.5s ease-out;
+}
+@media (max-width: 360px) {
+  .hero-content-wrapper .hero-content-container .hero-downloads .btn-hero {
+    width: 100%;
+  }
+}
+.hero-content-wrapper .hero-content-container .hero-downloads .btn-hero:hover {
+  background-color: rgba(0, 81, 255, 0.8235294118);
+  box-shadow: inset 0 0 0 1px rgb(74, 36, 79);
+}
+@media (max-width: 360px) {
+  .hero-content-wrapper .hero-content-container .hero-downloads .download {
+    margin-bottom: 14px;
+  }
+}
+.hero-content-wrapper .hero-content-container .hero-downloads .features {
+  background-color: transparent;
+  margin-left: 5px;
+  transition: all 0.5s ease-out;
+}
+.hero-content-wrapper .hero-content-container .hero-downloads .features:hover {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px rgb(74, 36, 79);
+}
+
+.arrow-wrapper {
+  padding: 15px 0;
+  text-align: center;
+}
+.arrow-wrapper .hero-scroll {
+  color: #fff;
+  font-size: 42px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
