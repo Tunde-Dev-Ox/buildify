@@ -24,8 +24,8 @@ body {
   max-width: 1300px;
   margin: 0 auto;
   margin-bottom: 3rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
 }
 
 .hero-container {
@@ -35,7 +35,6 @@ body {
   -webkit-box-direction: normal;
   flex-direction: column;
 }
-
 
 //navbar stylings
 .navbar-wrapper {
@@ -52,7 +51,6 @@ body {
 }
 
 .logo {
-//   padding: 30px 15px;
   display: inline-block;
   position: relative;
   text-decoration: none;
@@ -99,14 +97,14 @@ body {
 }
 
 .display-mobile {
-    display: none;
-    @include tab {
-        display: block;
-    }
+  display: none;
+  @include tab {
+    display: block;
+  }
 
-    .hamburger-icon {
-        width: clamp(2.75rem, 2.156rem + 2.64vw, 3.625rem);
-    }
+  .hamburger-icon {
+    width: clamp(2.75rem, 2.156rem + 2.64vw, 3.625rem);
+  }
 }
 
 .hero-content-wrapper {
@@ -128,7 +126,7 @@ body {
     }
 
     .hero-content {
-      font-size: 18px;
+      font-size: clamp(1rem, 0.932rem + 0.34vw, 1.188rem);
       line-height: 1.1;
       color: rgba(255, 255, 255);
       text-shadow: 0 1px 0 #000;
@@ -160,7 +158,7 @@ body {
         text-transform: uppercase;
         transition: all 0.5s ease-out;
         @include mobile {
-            width: 100%;
+          width: 100%;
         }
 
         &:hover {
@@ -198,5 +196,234 @@ body {
     font-size: 42px;
     line-height: 1;
     font-weight: 400;
+  }
+}
+
+//about styling
+.main-section {
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+
+  .main-section-wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 1.2rem;
+  }
+}
+
+.about-header__wrapper {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.about-header {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: 'Nunito Sans', sans-serif;
+  color: #333;
+  font-size: 28px;
+  line-height: 1.1;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.about-header--content {
+  font-size: 16px;
+  line-height: 1.1;
+  color: #333;
+}
+
+.line-border {
+  display: block;
+  width: 70px;
+  height: 2px;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: #0051ffd2;
+}
+
+.about-contentWrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  @include mini-tab {
+    flex-direction: column;
+    width: 100%;
+    flex-basis: 100%;
+  }
+  @include mobile {
+    flex-direction: column;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+
+.about-content {
+  color: #000;
+  width: 50%;
+  font-size: clamp(1rem, 0.932rem + 0.34vw, 1.188rem);
+  line-height: 1.1;
+  @include mini-tab {
+    width: 100%;
+  }
+  @include mobile {
+    width: 100%;
+  }
+
+  .about-paragraph {
+    max-width: 100%;
+    @include mini-tab {
+      text-align: justify;
+      text-align-last: center;
+    }
+  }
+}
+
+.about-photo {
+  max-width: 100%;
+  text-align: center;
+  flex-basis: 50%;
+
+  .about-image {
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+  }
+}
+
+//portfolio styling
+.portfolio-header__wrapper {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.portfolio-header {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: 'Nunito Sans', sans-serif;
+  color: #333;
+  font-size: 28px;
+  line-height: 1.1;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.portfolio-header--content {
+  font-size: 16px;
+  line-height: 1.1;
+  color: #333;
+}
+
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  @include tab {
+    flex-wrap: wrap;
+  }
+
+  .portfolio-pictureWrapper {
+    max-width: 25%;
+    flex-basis: 25%;
+    text-decoration: none;
+    @include tab {
+      max-width: 50%;
+      flex-basis: 50%;
+    }
+
+    @include mobile {
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+
+    .overlay {
+      position: relative;
+      display: inline-block;
+      max-width: 100%;
+
+      .portfolio-picture {
+        max-width: 100%;
+        vertical-align: middle;
+        display: inline-block;
+      }
+
+      .overlay-background {
+        opacity: 0;
+        transition: opacity 500ms ease-out 0s;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        background-color: rgba(69, 134, 241, 0.8);
+
+        &:hover {
+          opacity: 1;
+        }
+
+        .contrast {
+          color: #fff;
+          text-shadow: 0 1px 0 #000;
+          margin-top: 20px;
+          margin-bottom: 10px;
+          font-family: 'Nunito Sans', sans-serif;
+          font-size: 20px;
+          line-height: 28px;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+#portfolio-padding {
+  @include tab {
+    padding: 0px 0px;
+  }
+  @include mobile {
+    padding: 0;
+  }
+}
+
+.contact-now_innerWrapper {
+  max-width: 1300px;
+  padding-right: 1.2rem;
+  padding-left: 1.2rem;
+  margin: 0 auto;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  text-align: center;
+
+  .contact-now {
+    font-size: 22px;
+    margin-bottom: 30px;
+    line-height: 1.2;
+  }
+
+  .contact-btn {
+    position: relative;
+    display: inline-block;
+    border-radius: 4px;
+    color: #000;
+    cursor: pointer;
+    padding: 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid #0052ff;
+    background-color: transparent;
+    -webkit-appearance: button;
+    overflow: visible;
+    text-transform: uppercase;
+    transition: all 0.5s ease-out;
+    @include mobile {
+      width: 100%;
+    }
   }
 }
