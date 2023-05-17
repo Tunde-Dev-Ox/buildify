@@ -416,6 +416,170 @@ body {
   }
 }
 
+.testimonials {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/Images/57c30503617cac9b64365d2e_testimonial-bg.jpg);
+  background-position: 0px 0px, 50% 50%;
+  background-size: auto, cover;
+  background-repeat: repeat, no-repeat;
+  text-transform: uppercase;
+  min-height: 450px;
+  margin-bottom: 3rem;
+  padding-top: 3rem;
+}
+.testimonials .testimonials-container {
+  max-width: 1300px;
+  padding: 0 1.2rem;
+  margin: 0 auto;
+}
+.testimonials .testimonials-container .testimonials-header_wrapper {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.testimonials .testimonials-container .testimonials-header_wrapper .testimonial-header {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: Nunito, sans-serif;
+  color: #333;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 1px 0 #000;
+}
+.testimonials .testimonials-container .testimonials-header_wrapper .testimonial-lineBorder {
+  background-color: #fff;
+  display: block;
+  width: 70px;
+  height: 2px;
+  margin: 0 auto;
+  margin-top: 20px;
+  color: #fff;
+  text-shadow: 0 1px 0 #000;
+}
+.testimonials .testimonials-container .testimonial-sliderWrapper {
+  height: 200px;
+  background-color: transparent;
+  text-align: center;
+  position: relative;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+@media (max-width: 767px) {
+  .testimonials .testimonials-container .testimonial-sliderWrapper {
+    height: 250px;
+  }
+}
+@media (max-width: 360px) {
+  .testimonials .testimonials-container .testimonial-sliderWrapper {
+    height: 400px;
+  }
+}
+.testimonials .testimonials-container .testimonial-sliderWrapper .slider-mask {
+  display: block;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  height: 100%;
+  white-space: nowrap;
+}
+.testimonials .testimonials-container .testimonial-sliderWrapper .slider-mask .slide {
+  transform: translateX(0px);
+  opacity: 1;
+  transition: transform 500ms ease 0s;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  white-space: normal;
+}
+.testimonials .testimonials-container .testimonial-sliderWrapper .slider-mask .slide .testimonial-text {
+  color: #fff;
+  font-size: clamp(1rem, 0.932rem + 0.34vw, 1.188rem);
+  line-height: 1.8;
+  font-style: italic;
+  text-transform: none;
+}
+.testimonials .testimonials-container .testimonial-sliderWrapper .slider-mask .slide .testimonial-name {
+  margin-top: 15px;
+  color: #4d8cf5;
+  font-size: 16px;
+  font-weight: 700;
+}
+.testimonials .testimonials-container .testimonial-sliderWrapper .slider-btns {
+  position: absolute;
+  z-index: 2;
+  top: auto;
+  text-align: center;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  padding-top: 10px;
+  height: 40px;
+}
+.testimonials .testimonials-container .testimonial-sliderWrapper .slider-btns .slider-btn {
+  background-color: #fff;
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  cursor: pointer;
+  border-radius: 100%;
+  margin: 0 3px 0.5em;
+  transition: background-color 100ms, color 100ms;
+}
+
+.services-containers {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: baseline;
+}
+.services-containers .services-wrappers {
+  padding: 15px;
+  max-width: 33.3333333%;
+  flex-basis: 33.333333%;
+}
+@media (max-width: 767px) {
+  .services-containers .services-wrappers {
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+}
+@media (max-width: 550px) {
+  .services-containers .services-wrappers {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+.services-containers .services-wrappers .service-icon {
+  color: #4d8cf5;
+  font-size: 36px;
+  line-height: 1;
+}
+.services-containers .services-wrappers .services-header {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+}
+.services-containers .services-wrappers .services-content {
+  margin-bottom: 20px;
+  font-size: clamp(1rem, 0.932rem + 0.34vw, 1.188rem);
+  color: rgba(0, 0, 0, 0.6549019608);
+}
+
 *, ::before, ::after {
   box-sizing: border-box;
   margin: 0;
