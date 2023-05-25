@@ -53,7 +53,6 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
 }
 
 .nav-menu {
@@ -142,6 +141,7 @@ body {
   border: 1px solid #0052ff;
   background-color: rgba(0, 81, 255, 0.8235294118);
   -webkit-appearance: button;
+  appearance: button;
   overflow: visible;
   text-transform: uppercase;
   transition: all 0.5s ease-out;
@@ -406,6 +406,7 @@ body {
   border: 1px solid #0052ff;
   background-color: transparent;
   -webkit-appearance: button;
+  appearance: button;
   overflow: visible;
   text-transform: uppercase;
   transition: all 0.5s ease-out;
@@ -578,6 +579,174 @@ body {
   margin-bottom: 20px;
   font-size: clamp(1rem, 0.932rem + 0.34vw, 1.188rem);
   color: rgba(0, 0, 0, 0.6549019608);
+}
+
+.teamHeader-wrapper {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.teamHeader-wrapper .team-header {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 550px) {
+  .team-grid {
+    flex-direction: column;
+  }
+}
+.team-grid .team-container {
+  max-width: 25%;
+  flex-basis: 25%;
+}
+@media (max-width: 550px) {
+  .team-grid .team-container {
+    max-width: 100%;
+    flex-basis: 100%;
+    margin-bottom: 15px;
+  }
+}
+.team-grid .team-container .team-wrapper {
+  padding: 15px;
+  text-align: center;
+}
+@media (max-width: 550px) {
+  .team-grid .team-container .team-wrapper {
+    padding: 0;
+  }
+}
+.team-grid .team-container .team-wrapper .overlay {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+.team-grid .team-container .team-wrapper .overlay img {
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+}
+.team-grid .team-container .team-wrapper .overlay .overlay-background {
+  opacity: 0;
+  transition: opacity 500ms ease 0s;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(69, 134, 241, 0.8);
+}
+.team-grid .team-container .team-wrapper .overlay .overlay-background:hover {
+  opacity: 1;
+}
+.team-grid .team-container .team-wrapper .overlay .overlay-background .overlay-content {
+  opacity: 0;
+  transition: opacity 500ms ease 0s, transform 500ms ease 0s;
+  transform: translateX(0px) translateY(20px) translateZ(0px);
+}
+.team-grid .team-container .team-wrapper .overlay .overlay-background .overlay-content .team-icon {
+  display: inline-block;
+  width: 30px;
+  margin-right: 5px;
+  margin-left: 5px;
+  background-color: #222;
+  text-decoration: none;
+  font-family: "Fontawesome webfont", sans-serif;
+  color: #fff;
+  line-height: 32px;
+  text-align: center;
+  transition: all 300ms ease-in-out;
+  font-weight: 600;
+}
+.team-grid .team-container .team-wrapper .team-name {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #333;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+}
+.team-grid .team-container .team-wrapper .team-title {
+  color: #5c5c5c;
+  font-size: 15px;
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+.video {
+  min-height: 470px;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  position: relative;
+  width: 100%;
+}
+.video .video-file {
+  width: 100% !important;
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  z-index: -20;
+}
+
+.align-center {
+  padding: 35px;
+  text-align: center;
+}
+.align-center .play--btn {
+  background-color: transparent;
+  max-width: 82px;
+  border: 0px;
+}
+.align-center .play--btn .play {
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  vertical-align: middle;
+  display: inline-block;
+  cursor: pointer;
+}
+.align-center .video-content-wrapper, .align-center .video-content-wrapper .video-content {
+  font-size: 22px;
+  line-height: 1.2;
+  color: #fff;
+  text-shadow: 0 1px #000;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.align-center .download {
+  position: relative;
+  display: inline-block;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  padding: 24px;
+  font-size: 16px;
+  border: 1px solid #0052ff;
+  background-color: rgba(0, 81, 255, 0.8235294118);
+  -webkit-appearance: button;
+  appearance: button;
+  overflow: visible;
+  text-transform: uppercase;
+  transition: all 0.5s ease-out;
 }
 
 *, ::before, ::after {
