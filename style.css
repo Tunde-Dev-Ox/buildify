@@ -8,7 +8,7 @@ body {
 }
 
 .hero-section {
-  padding-top: 1.5rem;
+  padding-top: clamp(0.8rem, 0.657rem + 0.85vw, 1.4rem);
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(/Images/57c2d86bb166809064181470_hero-bg.jpg);
   background-position: 0px 0px, 50% 50%;
   background-size: auto, cover;
@@ -40,12 +40,17 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+@media (max-width: 360px) {
+  .navbar-wrapper {
+    height: 27px;
+  }
+}
 
 .logo {
   display: inline-block;
   position: relative;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: clamp(1.188rem, 1.053rem + 0.8vw, 1.75rem);
   font-weight: 600;
   /** TEXT GRADIENT */
   color: #eef2e1;
@@ -89,7 +94,7 @@ body {
   }
 }
 .display-mobile .hamburger-icon {
-  width: clamp(2.75rem, 2.156rem + 2.64vw, 3.625rem);
+  width: clamp(1.563rem, 1.428rem + 0.8vw, 2.125rem);
 }
 
 .hero-content-wrapper {
@@ -102,7 +107,7 @@ body {
   text-align: center;
 }
 .hero-content-wrapper .hero-content-container .hero-header {
-  font-size: clamp(2.188rem, 1.708rem + 2.56vw, 3.625rem);
+  font-size: clamp(1.688rem, 1.708rem + 2.56vw, 3.625rem);
   text-transform: uppercase;
   color: rgb(255, 255, 255);
   line-height: 1.1;
@@ -122,7 +127,7 @@ body {
 .hero-content-wrapper .hero-content-container .hero-downloads {
   text-align: center;
 }
-@media (max-width: 360px) {
+@media (max-width: 550px) {
   .hero-content-wrapper .hero-content-container .hero-downloads {
     display: flex;
     justify-content: center;
@@ -146,7 +151,7 @@ body {
   text-transform: uppercase;
   transition: all 0.5s ease-out;
 }
-@media (max-width: 360px) {
+@media (max-width: 550px) {
   .hero-content-wrapper .hero-content-container .hero-downloads .btn-hero {
     width: 100%;
   }
@@ -168,6 +173,9 @@ body {
 .hero-content-wrapper .hero-content-container .hero-downloads .features:hover {
   background-color: transparent;
   box-shadow: inset 0 0 0 1px rgb(74, 36, 79);
+}
+.hero-content-wrapper .hero-content-container .hero-downloads .download-btn-hero {
+  margin-bottom: 12px;
 }
 
 .arrow-wrapper {
@@ -850,6 +858,11 @@ body {
   margin: 0 auto;
   width: 70%;
 }
+@media (max-width: 550px) {
+  .form-wrapper {
+    width: 100%;
+  }
+}
 .form-wrapper .form-control {
   display: flex;
   flex-direction: column;
@@ -908,6 +921,43 @@ body {
   text-transform: uppercase;
   transition: all 0.5s ease-out;
   padding: 10px 30px;
+}
+
+.footer {
+  text-align: center;
+  padding: 22px 0;
+  background-color: #222;
+}
+
+.link-wrapper {
+  padding: 15px 0;
+}
+.link-wrapper .footer-link {
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  transition: all 300ms ease-in-out;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.copyright-wrapper {
+  color: #777;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.copyright-link {
+  color: rgba(69, 134, 241, 0.8);
+  text-decoration: none;
+}
+.copyright-link:hover {
+  color: rgba(218, 218, 218, 0.8);
 }
 
 *, ::before, ::after {

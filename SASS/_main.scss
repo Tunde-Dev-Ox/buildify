@@ -11,7 +11,7 @@ body {
 }
 
 .hero-section {
-  padding-top: 1.5rem;
+  padding-top: clamp(0.8rem, 0.657rem + 0.85vw, 1.4rem);
   background-image: linear-gradient(
       180deg,
       rgba(0, 0, 0, 0.75),
@@ -48,13 +48,16 @@ body {
   height: 50px;
   align-items: center;
   justify-content: space-between;
+  @include mobile {
+    height: 27px;
+  }
 }
 
 .logo {
   display: inline-block;
   position: relative;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: clamp(1.188rem, 1.053rem + 0.8vw, 1.75rem);
   font-weight: 600;
 
   /** TEXT GRADIENT */
@@ -102,7 +105,7 @@ body {
   }
 
   .hamburger-icon {
-    width: clamp(2.75rem, 2.156rem + 2.64vw, 3.625rem);
+    width: clamp(1.563rem, 1.428rem + 0.8vw, 2.125rem);
   }
 }
 
@@ -116,7 +119,7 @@ body {
     text-align: center;
 
     .hero-header {
-      font-size: clamp(2.188rem, 1.708rem + 2.56vw, 3.625rem);
+      font-size: clamp(1.688rem, 1.708rem + 2.56vw, 3.625rem);
       text-transform: uppercase;
       color: rgba(255, 255, 255);
       line-height: 1.1;
@@ -137,14 +140,14 @@ body {
 
     .hero-downloads {
       text-align: center;
-      @include mobile {
+      @include large-mobile {
         @include flex;
         flex-direction: column;
       }
 
       .btn-hero {
         @include download-btn;
-        @include mobile {
+        @include large-mobile {
           width: 100%;
         }
 
@@ -169,6 +172,10 @@ body {
           background-color: transparent;
           box-shadow: inset 0 0 0 1px rgb(74, 36, 79);
         }
+      }
+
+      .download-btn-hero {
+        margin-bottom: 12px;
       }
     }
   }
@@ -862,6 +869,9 @@ body {
   justify-content: center;
   margin: 0 auto;
   width: 70%;
+  @include large-mobile {
+    width: 100%;
+  }
 
   .form-control {
     display: flex;
@@ -913,3 +923,41 @@ body {
   }
 }
 
+//FOOTER STYLING
+.footer {
+  text-align: center;
+  padding: 22px 0;
+  background-color: #222;
+}
+
+.link-wrapper {
+  padding: 15px 0;
+
+  .footer-link {
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    transition: all 300ms ease-in-out;
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
+
+.copyright-wrapper {
+  color: #777;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.copyright-link {
+  color: rgba(69, 134, 241, 0.8);
+  text-decoration: none;
+  &:hover {
+    color: rgba(218, 218, 218, 0.8);
+  }
+}
