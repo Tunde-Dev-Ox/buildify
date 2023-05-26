@@ -28,6 +28,12 @@
   }
 }
 
+@mixin team-card {
+  @media (max-width: 666px) {
+    @content;
+  }
+}
+
 @mixin download-btn {
   position: relative;
   display: inline-block;
